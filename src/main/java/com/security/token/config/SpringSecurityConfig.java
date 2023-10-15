@@ -16,7 +16,11 @@ public class SpringSecurityConfig {
 				.password("password")
 				.roles("USER")
 				.build();
-		return new InMemoryUserDetailsManager(u œaser); 
+		return new InMemoryUserDetailsManager(user); 
+		
+	}
+	
+	public SecurityFilterChain filterChan() {
 		
 	}
 
