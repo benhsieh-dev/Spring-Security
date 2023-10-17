@@ -22,11 +22,13 @@ public class SpringSecurityConfig {
 		
 	}
 	
+	@SuppressWarnings("removal")
+	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests((authz) -> authz
+		http.authorizeHttpRequests(authz -> authz
 					.antMatchers("/message")
 					.authenticated()
-				)
+					)
 					.httpBasic();
 				return http.build(); 
 	}
